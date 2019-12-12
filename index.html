@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <title>Boolean Fake API</title>
+</head>
+
+<body>
+
+    <div id="container">
+
+        <h1>Chiamate Ajax alle API Boolean</h1>
+        <h4>(restituiscono valori random)</h4>
+        <div>
+            <ul>
+                <li data-endpoint="intero">intero tra 0 e 9</li>
+                <li data-endpoint="parola">parola (lorem ipsum style)</li>
+                <li data-endpoint="nome">nome</li>
+                <li data-endpoint="telefono">n. telefono</li>
+                <li data-endpoint="email">indirizzo e-mail</li>
+                <li data-endpoint="frase">frase</li>
+                <li data-endpoint="booleano">valore booleano</li>
+                <li data-endpoint="array">array di n valori (univoci) compresi tra min e max</li>
+            </ul>
+
+            <div class="panel-container">
+                <h2>Output:</h2>
+                <span class="copy-btn"><i class="far fa-copy"></i>&nbsp;Copy</span>
+                <textarea readonly class="panel output-panel" placeholder="Output della chiamata alla API endpoint"></textarea>
+            </div>
+
+            <div class="panel-container">
+                <h2>Link:</h2>
+                <span class="copy-btn"><i class="far fa-copy"></i>&nbsp;Copy</span>
+                <textarea readonly class="panel link-panel" placeholder="Link alla API endpoint"></textarea>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
