@@ -14,17 +14,20 @@ h2, h4 {
     color: #1B3C59;
 }
 
+h2 {
+    margin: 30px 0 5px 0;
+}
+
 #container {
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    margin: 0 auto;
     font-family: sans-serif;
     font-size: 14px;
     background-color: #FFFFFF;
-    width: 100vw;
-    height: 100vh;
     padding: 5px;
 }
 
@@ -36,7 +39,7 @@ ul li {
     background-color: #61CE4E;
     color: #FFFFFF;
     text-align: center;
-    margin: 5px 50px;
+    margin: 5px 0;
     font-weight: bold;
     padding: 5px;
 }
@@ -48,6 +51,10 @@ ul li:hover {
 /* elimino bordo sui campi di input quando hanno il focus */
 textarea:focus {
     outline: none;
+}
+
+textarea {
+    margin: 0 auto;
 }
 
 .panel {
@@ -75,10 +82,6 @@ textarea:focus {
     border: 4px solid #73D462;
 }
 
-h2 {
-    margin: 30px 0 5px 0;
-}
-
 .copy-btn {
     position: absolute;
     top: 2px;
@@ -90,6 +93,30 @@ h2 {
     cursor: pointer;
 }
 
+.copied-message {
+    position: absolute;
+    right: 8px;
+    bottom: 10px;
+    width: 220px;
+    height: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    font-size: 16px;
+    background-color: #1B3C59;
+    color: white;
+    border-radius: 5px;
+    padding: 2px;
+    text-align: center;
+}
+
+.box-disappearing {
+    animation: trasparent 3s forwards;
+}
+
+.box-invisible {
+    opacity: 0;
+}
+
 @media screen and (max-width: 768px) {
     .panel {
         width: 500px;
@@ -99,5 +126,19 @@ h2 {
 @media screen and (max-width: 576px) {
     .panel, .panel-container {
         width: 310px;
+    }
+}
+
+@keyframes trasparent {
+    0% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
     }
 }

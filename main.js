@@ -51,10 +51,17 @@ $(document).ready(function() {
     // intercetto click sui bottoncini "Copy"
     $('.copy-btn').click(function() {
 
-        var panelText = $(this).siblings('.panel'); // individuo elemento cliccato
+        var panelText = $(this).siblings('.panel'); // seleziono la textarea relativa al clic
         panelText.select(); // seleziono il testo corrente all'interno della textarea
         document.execCommand("copy"); // copio il testo selezionato nella Clipboard
-        alert("Testo copiato nella Clipboard");
+        // alert("Testo copiato nella Clipboard");
+
+        var copiedBox = $(this).siblings('.copied-message');
+        copiedBox.addClass('box-disappearing');
+        setTimeout(function() {
+            copiedBox.removeClass('box-disappearing');
+        }, 3000);
+
     });
 
 
